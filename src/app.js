@@ -13,6 +13,9 @@ app.use(express.json());
 
 
 // routes
+app.get("/", (req, res) => {
+    res.send("Task Manager API is running 🚀");
+  });
 app.use("/api/auth", authRoutes);
 app.use("/api/projects", projectRoutes);
 app.use("/api/tasks", taskRoutes);
